@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://angielskijakwdomu.pl/sitemap.xml
