@@ -1,61 +1,437 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Homely English – Szkoła języka angielskiego</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homely English – Szkoła języka angielskiego</title>
 
-      <!-- SEO / opis -->
-      <meta
-        name="description"
-        content="Szkoła języka angielskiego w Markach. Kameralne zajęcia dla dzieci i młodzieży."
-      />
-      <meta name="author" content="Homely English" />
+    <!-- SEO / opis -->
+    <meta
+      name="description"
+      content="Szkoła języka angielskiego w Markach. Kameralne zajęcia dla dzieci i młodzieży."
+    />
+    <meta name="author" content="Homely English" />
 
-      <!-- Favicon -->
-      <link rel="icon" href="WIP/logo.png" type="image/png" />
-      <link rel="shortcut icon" href="WIP/logo.ico" type="image/x-icon" />
+    <!-- Favicon -->
+    <link rel="icon" href="logo.png" type="image/png" />
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
 
-      <!-- Tailwind CSS -->
-      <link
-        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-        rel="stylesheet"
-      />
-    </head>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f5f5f5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        color: #333;
-        text-align: center;
-      }
-      .container {
-        background-color: #fff;
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      }
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-      }
-      p {
-        font-size: 1.2rem;
-        color: #666;
-      }
-    </style>
+    <!-- Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <div class="container">
-      <h1>Homely English</h1>
-      <p>Zapraszamy wkrótce!</p>
-    </div>
+  <body class="font-sans text-gray-900 bg-white antialiased">
+    <!-- Nawigacja -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 backdrop-blur bg-white/90 border-b"
+    >
+      <div
+        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3"
+      >
+        <a href="#top" class="flex items-center gap-3">
+          <span
+            class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-black text-white font-bold"
+            >HE</span
+          >
+          <div>
+            <div class="font-semibold leading-none">Homely English</div>
+            <div class="text-xs text-gray-500 leading-none">
+              Szkoła języka angielskiego
+            </div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a
+            href="#cennik"
+            class="text-sm font-medium text-gray-700 hover:text-black"
+            >Cennik</a
+          >
+          <a
+            href="#kontakt"
+            class="inline-flex items-center rounded-2xl px-4 py-2 text-sm font-semibold bg-black text-white shadow hover:opacity-90"
+            >Zapisz się</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section
+      id="top"
+      class="pt-28 pb-16 bg-gradient-to-b from-gray-50 to-white"
+    >
+      <div
+        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center"
+      >
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+            Angielski w Markach — tradycyjnie, kameralnie, z pasją
+          </h1>
+          <p class="mt-4 text-lg text-gray-600">
+            Kameralne zajęcia w małych grupach, od pierwszej klasy szkoły
+            podstawowej aż do liceum. Skuteczne przygotowanie do egzaminu
+            ósmoklasisty oraz matury na poziomie podstawowym i rozszerzonym, w
+            przyjaznej atmosferze sprzyjającej nauce i rozwojowi.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a
+              href="#kontakt"
+              class="inline-flex items-center rounded-2xl px-5 py-3 text-sm font-semibold bg-black text-white shadow hover:opacity-90"
+              >Zapisz się</a
+            >
+            <a
+              href="#cennik"
+              class="inline-flex items-center rounded-2xl px-5 py-3 text-sm font-semibold border hover:bg-gray-50"
+              >Zobacz cennik</a
+            >
+          </div>
+          <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm text-gray-700">
+            <li class="flex gap-3">
+              
+              <span
+                ><span class="font-semibold">Małe grupy</span> — Do 4 osób,
+                szybkie postępy</span
+              >
+            </li>
+            <li class="flex gap-3">
+              
+              <span
+                ><span class="font-semibold">Lektor z doświadczeniem</span> —
+                Przyjazna atmosfera</span
+              >
+            </li>
+            <li class="flex gap-3">
+              <span
+                ><span class="font-semibold">Indywidualne podejście</span> —
+                Uwzględniam tempo i potrzeby ucznia
+              </span>
+            </li>
+            <li class="flex gap-3">
+              
+              <span
+                ><span class="font-semibold">Ciągłe doskonalenie</span> — Lektor
+                regularnie podnosi kwalifikacje i doskonali warsztat</span
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="relative hidden md:block">
+          <div
+            class="aspect-w-4 aspect-h-3 w-full rounded-3xl bg-white p-3 shadow-xl border flex items-center justify-center"
+          >
+            <div class="text-center p-6">
+              <div class="text-6xl font-black tracking-tight">
+                Homely English
+              </div>
+              <div class="text-gray-500 mt-2">Marki • since 1998</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="o-mnie" class="py-16 bg-gray-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold">O mnie</h2>
+        <div
+          class="mt-8 grid sm:grid-cols-1 lg:grid-cols-1 gap-10 items-center"
+        >
+          <div>
+            <p class="text-lg text-gray-700">
+              Witaj na stronie Homely English School, kameralnej, pełnej pasji i
+              zaangażowania szkoły języka angielskiego, którą prowadzę od ponad
+              25 lat. Nazywam się Monika Rozmarynowska-Komar i jestem magistrem
+              filologii angielskiej. Język angielski oraz nauczanie to moja
+              prawdziwa pasja, którą każdego dnia staram się przekazywać moim
+              uczniom. W Homely English School stawiam na jakość, a nie ilość,
+              dlatego uczę w niewielkich grupach, co pozwala na indywidualne
+              podejście do każdego ucznia. Cenię tradycyjne metody nauczania,
+              dlatego każdy uczeń ma obowiązek starannego prowadzenia zeszytu,
+              robienia notatek, wklejania otrzymanych materiałów oraz odrabiania
+              prac domowych. Systematyczne utrwalanie oraz sprawdzanie wiedzy to
+              klucz do sukcesu, dlatego na moich zajęciach kładę nacisk na
+              liczne powtórki oraz aktywne używanie zdobytej wiedzy.
+              Wykorzystuję różnorodne materiały, w tym autorskie oraz stworzone
+              przez innych anglistów. Nauka w mojej szkole nie polega na
+              ‘mechanicznym przerobieniu’ podręcznika, materiały tworzę i
+              starannie dobieram do potrzeb każdego ucznia czy grupy. W ten
+              sposób nauka jest bardziej życiowa, elastyczna i dopasowana do
+              realnej sytuacji. Na moich zajęciach nie brakuje również gier
+              planszowych oraz innych form zabawy, pomagają one w utrwalaniu
+              struktur gramatycznych w sposób naturalny, angażujący i kreatywny.
+              Zapraszam do odkrywania tajników języka angielskiego w Homely
+              English School, gdzie każde zajęcia są wyjątkową przygodą w
+              świecie języka i kultury.
+            </p>
+            
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold">Galeria</h2>
+        <div class="relative mt-8">
+          <!-- Kontener karuzeli -->
+          <div class="overflow-hidden rounded-3xl shadow-sm">
+            <div id="carousel" class="flex transition-transform duration-500">
+              <img
+                src="logo.png"
+                alt="Zajęcia w małej grupie"
+                class="carousel-item w-full flex-shrink-0 h-64 object-cover transition-transform duration-500 rounded-xl"
+              />
+              <img
+                src="logo.png"
+                alt="Indywidualne lekcje angielskiego"
+                class="carousel-item w-full flex-shrink-0 h-64 object-cover transition-transform duration-500 rounded-xl"
+              />
+              <img
+                src="logo.png"
+                alt="Zajęcia dla dzieci"
+                class="carousel-item w-full flex-shrink-0 h-64 object-cover transition-transform duration-500 rounded-xl"
+              />
+              <img
+                src="logo.png"
+                alt="Business English"
+                class="carousel-item w-full flex-shrink-0 h-64 object-cover transition-transform duration-500 rounded-xl"
+              />
+              <img
+                src="logo.png"
+                alt="Kameralne zajęcia"
+                class="carousel-item w-full flex-shrink-0 h-64 object-cover transition-transform duration-500 rounded-xl"
+              />
+              <img
+                src="logo.png"
+                alt="Zajęcia z młodzieżą"
+                class="carousel-item w-full flex-shrink-0 h-64 object-cover transition-transform duration-500 rounded-xl"
+              />
+            </div>
+          </div>
+
+          <!-- Przyciski -->
+          <button
+            id="prev"
+            class="absolute top-1/2 left-2 -translate-y-1/2 bg-black text-white rounded-full p-2 shadow-md hover:opacity-80"
+          >
+            &#10094;
+          </button>
+          <button
+            id="next"
+            class="absolute top-1/2 right-2 -translate-y-1/2 bg-black text-white rounded-full p-2 shadow-md hover:opacity-80"
+          >
+            &#10095;
+          </button>
+
+          <!-- Kropki nawigacyjne -->
+          <div id="dots" class="flex justify-center mt-4 gap-2">
+            <span
+              class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer"
+            ></span>
+            <span
+              class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer"
+            ></span>
+            <span
+              class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer"
+            ></span>
+            <span
+              class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer"
+            ></span>
+            <span
+              class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer"
+            ></span>
+            <span
+              class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer"
+            ></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cennik -->
+    <section id="cennik" class="py-16 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold">Cennik</h2>
+        <div class="mt-8 grid md:grid-cols-3 gap-6">
+          <div class="rounded-3xl border bg-white p-6 shadow-sm">
+            <div class="text-lg font-semibold">Grupy 2-osobowe</div>
+            <div class="mt-1 text-2xl font-extrabold">550 zł / miesiąc</div>
+            <ul class="mt-4 text-sm text-gray-600 space-y-2">
+              <b>70 zajęć w ciągu roku</b>
+              <li>2×45 min tygodniowo</li>
+              <li>materiały w cenie</li>
+            </ul>
+          </div>
+          <div class="rounded-3xl border bg-white p-6 shadow-sm">
+            <div class="text-lg font-semibold">Grupy 3-osobowe</div>
+            <div class="mt-1 text-2xl font-extrabold">450 zł / miesiąc</div>
+            <ul class="mt-4 text-sm text-gray-600 space-y-2">
+              <b>70 zajęć w ciągu roku</b>
+              <li>2×45 min tygodniowo</li>
+              <li>materiały w cenie</li>
+            </ul>
+          </div>
+          <div class="rounded-3xl border bg-white p-6 shadow-sm">
+            <div class="text-lg font-semibold">Grupy 4-osobowe</div>
+            <div class="mt-1 text-2xl font-extrabold">380 zł / miesiąc</div>
+            <ul class="mt-4 text-sm text-gray-600 space-y-2">
+              <b>70 zajęć w ciągu roku</b>
+              <li>2×45 min tygodniowo</li>
+              <li>materiały w cenie</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="py-16 bg-gray-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold">Kontakt</h2>
+        <div class="mt-8 grid lg:grid-cols-2 gap-8">
+          <div class="rounded-3xl border bg-white p-6 shadow-sm">
+            <div class="text-lg font-semibold">Dane kontaktowe</div>
+            <div class="mt-3 text-sm">
+              <div>
+                Telefon:
+                <a class="underline" href="tel:+48111222333">+48 502 050 142</a>
+              </div>
+              <div>
+                Email:
+                <a class="underline" href="mailto:angielski.marki@gmail.com"
+                  >angielski.marki@gmail.com</a
+                >
+              </div>
+              <div class="mt-2 text-gray-600">
+                Adres: ul. Żeromskiego 6, 05‑270 Marki
+              </div>
+            </div>
+          </div>
+          <div class="rounded-3xl border overflow-hidden shadow-sm">
+            <iframe
+              title="Mapa Marki"
+              class="w-full h-72"
+              loading="lazy"
+              src="https://www.google.com/maps?q=Żeromskiego+6,+05-270+Marki&output=embed"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t bg-white">
+      <div
+        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-4"
+      >
+        <div>
+          <div class="font-semibold text-gray-800">Homely English</div>
+          <div>© 2025 Wszystkie prawa zastrzeżone.</div>
+        </div>
+        <div class="flex gap-6">
+          <a href="#top" class="hover:text-black">Polityka prywatności</a>
+          <a href="#top" class="hover:text-black">Regulamin</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
+
+<script>
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      header.classList.remove("bg-white/90");
+      header.classList.add("bg-white", "shadow-md");
+    } else {
+      header.classList.add("bg-white/90");
+      header.classList.remove("bg-white", "shadow-md");
+    }
+  });
+</script>
+
+<script>
+  const gallery = document.getElementById("galeria");
+  gallery.style.display = "none";
+  const carousel = document.getElementById("carousel");
+  const prevBtn = document.getElementById("prev");
+  const nextBtn = document.getElementById("next");
+  const dots = document.querySelectorAll("#dots .dot");
+  const items = document.querySelectorAll(".carousel-item");
+  const totalItems = items.length;
+  let index = 0;
+  let startX = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let isDragging = false;
+
+  // Aktualizacja karuzeli
+  function updateCarousel() {
+    carousel.style.transition = "transform 0.5s";
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("bg-black", i === index);
+      dot.classList.toggle("bg-gray-400", i !== index);
+    });
+    items.forEach((item, i) => {
+      item.style.transform = i === index ? "scale(1.05)" : "scale(1)";
+      item.style.boxShadow =
+        i === index ? "0 10px 20px rgba(0,0,0,0.2)" : "none";
+    });
+  }
+
+  // Obsługa przycisków
+  prevBtn.addEventListener("click", () => {
+    index = (index - 1 + totalItems) % totalItems;
+    updateCarousel();
+  });
+  nextBtn.addEventListener("click", () => {
+    index = (index + 1) % totalItems;
+    updateCarousel();
+  });
+
+  // Obsługa kropek
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      index = i;
+      updateCarousel();
+    });
+  });
+
+  // Autoplay
+  // setInterval(() => {
+  //   index = (index + 1) % totalItems;
+  //   updateCarousel();
+  // }, 5000);
+
+  // Touch events - płynne przesuwanie
+  carousel.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+    carousel.style.transition = "none";
+  });
+
+  carousel.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    const currentX = e.touches[0].clientX;
+    const diff = currentX - startX;
+    carousel.style.transform = `translateX(${
+      -index * 100 + (diff / carousel.offsetWidth) * 100
+    }%)`;
+  });
+
+  carousel.addEventListener("touchend", (e) => {
+    isDragging = false;
+    const endX = e.changedTouches[0].clientX;
+    const diffX = endX - startX;
+    carousel.style.transition = "transform 0.5s";
+    if (diffX > 50) index = (index - 1 + totalItems) % totalItems;
+    else if (diffX < -50) index = (index + 1) % totalItems;
+    updateCarousel();
+  });
+
+  // Inicjalizacja
+  updateCarousel();
+</script>
