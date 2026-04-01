@@ -1,279 +1,794 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homely English – Szkoła języka angielskiego</title>
 
-    
-    <meta
-      name="description"
-      content="Szkoła języka angielskiego w Markach. Kameralne zajęcia dla dzieci i młodzieży."
-    />
-    <meta name="author" content="Homely English" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homely English - Szkoła języka angielskiego</title>
 
-    
-    <link rel="icon" href="logo.png" type="image/png" />
-    <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+  <meta name="description" content="Szkoła języka angielskiego w Markach. Kameralne zajęcia dla dzieci i młodzieży." />
+  <meta name="author" content="Homely English" />
+  <meta name="keywords"
+    content="angielski Marki, szkoła językowa Marki, korepetycje angielski, nauka angielskiego dla dzieci, przygotowanie do matury z angielskiego, egzamin ósmoklasisty angielski" />
 
-    
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="font-sans text-gray-900 bg-white antialiased">
-    <!-- Nawigacja -->
-    <header
-      class="fixed top-0 left-0 right-0 z-50 backdrop-blur bg-white/90 border-b"
-    >
-      <div
-        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3"
-      >
-        <a href="#top" class="flex items-center gap-3">
-          <span
-            class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-black text-white font-bold"
-            >HE</span
-          >
-          <div>
-            <div class="font-semibold leading-none">Homely English</div>
-            <div class="text-xs text-gray-500 leading-none">
-              Szkoła języka angielskiego
-            </div>
-          </div>
-        </a>
-        <nav class="hidden md:flex items-center gap-8">
-          <a
-            href="#o-mnie"
-            class="text-sm font-medium text-gray-700 hover:text-black"
-            >O mnie</a
-          >
-          <a
-            href="#cennik"
-            class="text-sm font-medium text-gray-700 hover:text-black"
-            >Cennik</a
-          >
-          <a
-            href="#kontakt"
-            class="inline-flex items-center rounded-2xl px-4 py-2 text-sm font-semibold bg-black text-white shadow hover:opacity-90"
-            >Zapisz się</a
-          >
-        </nav>
-      </div>
-    </header>
+  <!-- Open Graph / Meta Tagi Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://angielskijakwdomu.pl/" />
+  <meta property="og:title" content="Homely English - Szkoła języka angielskiego w Markach" />
+  <meta property="og:description"
+    content="Kameralne zajęcia językowe dla dzieci i młodzieży w małych grupach. Rozpocznij naukę angielskiego z profesjonalnym lektorem." />
+  <meta property="og:image" content="https://angielskijakwdomu.pl/logo.png" />
 
-    <!-- Hero -->
-    <section
-      id="top"
-      class="pt-28 pb-16 bg-gradient-to-b from-gray-50 to-white"
-    >
-      <div
-        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center"
-      >
-        <div>
-          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
-            Angielski w Markach — tradycyjnie, kameralnie, z pasją
-          </h1>
-          <p class="mt-4 text-lg text-gray-600">
-            Kameralne zajęcia w małych grupach, od pierwszej klasy szkoły
-            podstawowej aż do liceum. Skuteczne przygotowanie do egzaminu
-            ósmoklasisty oraz matury na poziomie podstawowym i rozszerzonym, w
-            przyjaznej atmosferze sprzyjającej nauce i rozwojowi.
-          </p>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a
-              href="#kontakt"
-              class="inline-flex items-center rounded-2xl px-5 py-3 text-sm font-semibold bg-black text-white shadow hover:opacity-90"
-              >Zapisz się</a
-            >
-            <a
-              href="#cennik"
-              class="inline-flex items-center rounded-2xl px-5 py-3 text-sm font-semibold border hover:bg-gray-50"
-              >Zobacz cennik</a
-            >
-          </div>
-          <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm text-gray-700">
-            <li class="flex gap-3">
-              
-              <span
-                ><span class="font-semibold">Małe grupy</span> — Do 4 osób,
-                szybkie postępy</span
-              >
-            </li>
-            <li class="flex gap-3">
-              
-              <span
-                ><span class="font-semibold">Lektor z doświadczeniem</span> —
-                Przyjazna atmosfera</span
-              >
-            </li>
-            <li class="flex gap-3">
-              <span
-                ><span class="font-semibold">Indywidualne podejście</span> —
-                Uwzględniam tempo i potrzeby ucznia
-              </span>
-            </li>
-            <li class="flex gap-3">
-              
-              <span
-                ><span class="font-semibold">Ciągłe doskonalenie</span> — Lektor
-                regularnie podnosi kwalifikacje i doskonali warsztat</span
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="relative hidden md:block">
-          <div
-            class="aspect-w-4 aspect-h-3 w-full rounded-3xl bg-white p-3 shadow-xl border flex items-center justify-center"
-          >
-            <div class="text-center p-6">
-              <div class="text-6xl font-black tracking-tight">
-                Homely English
-              </div>
-              <div class="text-gray-500 mt-2">Marki • since 1998</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="o-mnie" class="py-16 bg-gray-50">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-extrabold">O mnie</h2>
-        <div
-          class="mt-8 grid sm:grid-cols-1 lg:grid-cols-1 gap-10 items-center"
-        >
-          <div>
-            <p class="text-lg text-gray-700">
-              Witaj na stronie Homely English School, kameralnej, pełnej pasji i
-              zaangażowania szkoły języka angielskiego, którą prowadzę od ponad
-              25 lat. Nazywam się Monika Rozmarynowska-Komar i jestem magistrem
-              filologii angielskiej. Język angielski oraz nauczanie to moja
-              prawdziwa pasja, którą każdego dnia staram się przekazywać moim
-              uczniom. W Homely English School stawiam na jakość, a nie ilość,
-              dlatego uczę w niewielkich grupach, co pozwala na indywidualne
-              podejście do każdego ucznia. Cenię tradycyjne metody nauczania,
-              dlatego każdy uczeń ma obowiązek starannego prowadzenia zeszytu,
-              robienia notatek, wklejania otrzymanych materiałów oraz odrabiania
-              prac domowych. Systematyczne utrwalanie oraz sprawdzanie wiedzy to
-              klucz do sukcesu, dlatego na moich zajęciach kładę nacisk na
-              liczne powtórki oraz aktywne używanie zdobytej wiedzy.
-              Wykorzystuję różnorodne materiały, w tym autorskie oraz stworzone
-              przez innych anglistów. Nauka w mojej szkole nie polega na
-              ‘mechanicznym przerobieniu’ podręcznika, materiały tworzę i
-              starannie dobieram do potrzeb każdego ucznia czy grupy. W ten
-              sposób nauka jest bardziej życiowa, elastyczna i dopasowana do
-              realnej sytuacji. Na moich zajęciach nie brakuje również gier
-              planszowych oraz innych form zabawy, pomagają one w utrwalaniu
-              struktur gramatycznych w sposób naturalny, angażujący i kreatywny.
-              Zapraszam do odkrywania tajników języka angielskiego w Homely
-              English School, gdzie każde zajęcia są wyjątkową przygodą w
-              świecie języka i kultury.
-            </p>
-            
-        </div>
-      </div>
-    </section>
-
-    <!-- Cennik -->
-    <section id="cennik" class="py-16 bg-white">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-extrabold">Cennik</h2>
-        <div class="mt-8 grid md:grid-cols-3 gap-6">
-          <div class="rounded-3xl border bg-white p-6 shadow-sm">
-            <div class="text-lg font-semibold">Grupy 2-osobowe</div>
-            <div class="mt-1 text-2xl font-extrabold">550 zł / miesiąc</div>
-            <ul class="mt-4 text-sm text-gray-600 space-y-2">
-              <b>70 zajęć w ciągu roku</b>
-              <li>2×45 min tygodniowo</li>
-              <li>materiały w cenie</li>
-            </ul>
-          </div>
-          <div class="rounded-3xl border bg-white p-6 shadow-sm">
-            <div class="text-lg font-semibold">Grupy 3-osobowe</div>
-            <div class="mt-1 text-2xl font-extrabold">450 zł / miesiąc</div>
-            <ul class="mt-4 text-sm text-gray-600 space-y-2">
-              <b>70 zajęć w ciągu roku</b>
-              <li>2×45 min tygodniowo</li>
-              <li>materiały w cenie</li>
-            </ul>
-          </div>
-          <div class="rounded-3xl border bg-white p-6 shadow-sm">
-            <div class="text-lg font-semibold">Grupy 4-osobowe</div>
-            <div class="mt-1 text-2xl font-extrabold">380 zł / miesiąc</div>
-            <ul class="mt-4 text-sm text-gray-600 space-y-2">
-              <b>70 zajęć w ciągu roku</b>
-              <li>2×45 min tygodniowo</li>
-              <li>materiały w cenie</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Kontakt -->
-    <section id="kontakt" class="py-16 bg-gray-50">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-extrabold">Kontakt</h2>
-        <div class="mt-8 grid lg:grid-cols-2 gap-8">
-          <div class="rounded-3xl border bg-white p-6 shadow-sm">
-            <div class="text-lg font-semibold">Dane kontaktowe</div>
-            <div class="mt-3 text-sm">
-              <div>
-                Telefon:
-                <a class="underline" href="tel:+48 502 050 142">+48 502 050 142</a>
-              </div>
-              <div>
-                Email:
-                <a class="underline" href="mailto:angielski.marki@gmail.com"
-                  >angielski.marki@gmail.com</a
-                >
-              </div>
-              <div class="mt-2 text-gray-600">
-                Adres: ul. Żeromskiego 6, 05‑270 Marki
-              </div>
-            </div>
-          </div>
-          <div class="rounded-3xl border overflow-hidden shadow-sm">
-            <iframe
-              title="Mapa Marki"
-              class="w-full h-72"
-              loading="lazy"
-              src="https://www.google.com/maps?q=Żeromskiego+6,+05-270+Marki&output=embed"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="border-t bg-white">
-      <div
-        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-4"
-      >
-        <div>
-          <div class="font-semibold text-gray-800">Homely English</div>
-          <div>© 2025 Wszystkie prawa zastrzeżone.</div>
-        </div>
-        <div class="flex gap-6">
-          <a href="#top" class="hover:text-black">Polityka prywatności</a>
-          <a href="#top" class="hover:text-black">Regulamin</a>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
-
-<script>
-  const header = document.querySelector("header");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
-      header.classList.remove("bg-white/90");
-      header.classList.add("bg-white", "shadow-md");
-    } else {
-      header.classList.add("bg-white/90");
-      header.classList.remove("bg-white", "shadow-md");
+  <!-- Schema.org do wyświetlania na mapach i bogatych wynikach wyszukiwania Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Homely English School",
+    "description": "Kameralne zajęcia z języka angielskiego od szkoły podstawowej po liceum. Przygotowanie do egzaminu ósmoklasisty i matury.",
+    "url": "https://angielskijakwdomu.pl/",
+    "telephone": "+48502050142",
+    "email": "angielski.marki@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ul. Żeromskiego 6",
+      "addressLocality": "Marki",
+      "postalCode": "05-270",
+      "addressCountry": "PL"
     }
-  });
-</script>
+  }
+  </script>
 
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .typewrite>.wrap {
+      border-right: 0.08em solid currentColor;
+      animation: blink-caret .8s step-end infinite;
+    }
+
+    @keyframes blink-caret {
+
+      from,
+      to {
+        border-color: transparent
+      }
+
+      50% {
+        border-color: currentColor;
+      }
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px) rotate(var(--tw-rotate));
+      }
+
+      50% {
+        transform: translateY(-15px) rotate(var(--tw-rotate));
+      }
+
+      100% {
+        transform: translateY(0px) rotate(var(--tw-rotate));
+      }
+    }
+
+    .animate-float {
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .animate-float-delay {
+      animation: float 6s ease-in-out infinite 2.5s;
+    }
+
+    @keyframes shimmer {
+      100% {
+        transform: translateX(100%);
+      }
+    }
+  </style>
+</head>
+
+<body class="font-sans text-gray-900 bg-white antialiased">
+  <!-- Nawigacja -->
+  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur bg-white/90 border-b">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3">
+      <a href="#top" class="flex items-center gap-3">
+        <span
+          class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-black text-white font-bold">HE</span>
+        <div>
+          <div class="font-semibold leading-none">Homely English</div>
+          <div class="text-xs text-gray-500 leading-none">
+            Szkoła języka angielskiego
+          </div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#o-mnie"
+          class="text-[15px] font-medium text-gray-600 hover:text-black hover:scale-105 transition-all duration-300">O
+          mnie</a>
+        <a href="#cennik"
+          class="text-[15px] font-medium text-gray-600 hover:text-black hover:scale-105 transition-all duration-300">Cennik</a>
+        <a href="#kontakt"
+          class="inline-flex items-center rounded-full px-6 py-2.5 text-sm font-semibold bg-black text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">Zapisz
+          się</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn"
+        class="md:hidden flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-black hover:bg-gray-100 transition-colors focus:outline-none">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar Menu -->
+  <div id="mobile-overlay"
+    class="fixed inset-0 z-[55] bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
+  </div>
+  <div id="mobile-sidebar"
+    class="fixed top-0 right-0 z-[60] h-full w-72 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col">
+    <div class="px-6 py-4 flex items-center justify-between border-b border-gray-100">
+      <span class="font-bold text-lg">Menu</span>
+      <button id="close-menu-btn"
+        class="p-2 -mr-2 rounded-full text-gray-500 hover:text-black hover:bg-gray-100 transition-colors focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-2 px-6 py-8">
+      <a href="#o-mnie"
+        class="mobile-link block px-4 py-3 rounded-xl text-lg font-medium text-gray-800 hover:bg-gray-50 hover:text-blue-600 transition-colors">O
+        mnie</a>
+      <a href="#cennik"
+        class="mobile-link block px-4 py-3 rounded-xl text-lg font-medium text-gray-800 hover:bg-gray-50 hover:text-blue-600 transition-colors">Cennik</a>
+      <a href="#kontakt"
+        class="mobile-link block px-4 py-3 rounded-xl text-lg font-medium text-gray-800 hover:bg-gray-50 hover:text-blue-600 transition-colors">Kontakt</a>
+    </nav>
+    <div class="mt-auto p-6 border-t border-gray-100">
+      <a href="#kontakt"
+        class="mobile-link w-full flex items-center justify-center rounded-2xl px-4 py-3.5 text-base font-semibold bg-black text-white shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all">
+        Zapisz się
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section id="top"
+    class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-gradient-to-b from-blue-50/50 to-white">
+    <!-- Decorative background blob -->
+    <div
+      class="absolute top-0 left-1/2 w-full -translate-x-1/2 overflow-hidden pointer-events-none flex justify-center z-0">
+      <div class="w-[800px] h-[600px] bg-blue-100/40 rounded-full blur-[80px] opacity-70 transform -translate-y-1/3">
+      </div>
+    </div>
+    <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
+      <div data-aos="fade-right">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+          Angielski w Markach
+          <br class="hidden sm:block" />
+          <span class="text-gray-400">—</span>
+          <span class="inline-grid grid-cols-1 grid-rows-1 items-start">
+            <!-- Niewidoczne najdłuższe hasła nakreślają idealny wymiar bez dodatkowych pikseli buforu -->
+            <span class="invisible col-start-1 row-start-1" aria-hidden="true">prosto do matury!</span>
+            <span class="invisible col-start-1 row-start-1" aria-hidden="true">z pasją do nauki.</span>
+            <!-- Prawdziwy, piszący się tekst -->
+            <span class="text-blue-600 typewrite col-start-1 row-start-1"></span>
+          </span>
+        </h1>
+        <p class="mt-4 text-lg text-gray-600">
+          Kameralne zajęcia w małych grupach, od pierwszej klasy szkoły
+          podstawowej aż do liceum. Skuteczne przygotowanie do egzaminu
+          ósmoklasisty oraz matury na poziomie podstawowym i rozszerzonym, w
+          przyjaznej atmosferze sprzyjającej nauce i rozwojowi.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#kontakt"
+            class="inline-flex items-center justify-center rounded-full px-8 py-3.5 text-[15px] font-semibold bg-black text-white shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">Zapisz
+            się</a>
+          <a href="#cennik"
+            class="inline-flex items-center justify-center rounded-full px-8 py-3.5 text-[15px] font-semibold border-2 border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50 hover:-translate-y-1 transition-all duration-300 shadow-sm">Zobacz
+            cennik</a>
+        </div>
+        <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm text-gray-700">
+          <li class="flex gap-3">
+            <span><span class="font-semibold">Małe grupy</span> — Do 4 osób,
+              szybkie postępy</span>
+          </li>
+          <li class="flex gap-3">
+            <span><span class="font-semibold">Lektor z doświadczeniem</span> —
+              Przyjazna atmosfera</span>
+          </li>
+          <li class="flex gap-3">
+            <span><span class="font-semibold">Indywidualne podejście</span> —
+              Uwzględniam tempo i potrzeby ucznia
+            </span>
+          </li>
+          <li class="flex gap-3">
+            <span><span class="font-semibold">Ciągłe doskonalenie</span> — Lektor
+              regularnie podnosi kwalifikacje i doskonali warsztat</span>
+          </li>
+        </ul>
+      </div>
+      <div class="relative hidden lg:flex items-center justify-center p-10" data-aos="fade-left" data-aos-delay="200">
+        <!-- Z tyłu wirujący kształt dla podbicia "Premium" -->
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-400 rounded-[50px] transform rotate-3 scale-105 opacity-20 blur-2xl animate-pulse">
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-blue-400 to-green-300 rounded-[50px] transform -rotate-3 scale-105 opacity-30 blur-xl">
+        </div>
+
+        <!-- Główna Szklana Karta (Glassmorphism) -->
+        <div
+          class="relative z-10 w-full aspect-[4/3] rounded-[40px] bg-white/70 backdrop-blur-2xl border border-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center p-8 overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
+
+          <!-- Lśnienie przewijające się po karcie po najechaniu -->
+          <div
+            class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:animate-[shimmer_1.5s_infinite] skew-x-12">
+          </div>
+
+          <!-- Dekoracyjny znak wodny -->
+          <div
+            class="absolute -top-10 -right-10 text-[10rem] opacity-5 transform rotate-12 group-hover:rotate-6 transition-transform duration-700 pointer-events-none">
+            🇬🇧</div>
+
+          <!-- Środek -->
+          <div class="relative text-center">
+            <div
+              class="inline-flex items-center justify-center w-24 h-24 rounded-3xl bg-gradient-to-br from-black to-gray-800 text-white shadow-2xl mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+              <span class="text-4xl font-extrabold tracking-tighter">HE</span>
+            </div>
+            <h2 class="text-4xl xl:text-5xl font-black tracking-tight text-gray-900 mb-2">Homely English</h2>
+            <div
+              class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-blue-50 text-blue-700 font-semibold text-sm border border-blue-100 shadow-sm mt-3">
+              <div class="relative flex h-2 w-2">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+              </div>
+              Marki • since 1998
+            </div>
+          </div>
+
+          <!-- Pływające "Plakietki" (Floating Badges) wokół karty -->
+          <div
+            class="absolute -bottom-6 -left-6 bg-white px-5 py-3 rounded-2xl shadow-xl border border-gray-100 flex items-center gap-3 transform -rotate-6 animate-float">
+            <div class="text-xl">⭐️</div>
+            <div>
+              <div class="text-sm font-bold text-gray-900">100% matura</div>
+              <div class="text-xs text-gray-500">Zadowoleni uczniowie</div>
+            </div>
+          </div>
+
+          <div
+            class="absolute top-12 -right-8 bg-black text-white px-5 py-3 rounded-2xl shadow-xl border border-gray-800 flex items-center gap-3 transform rotate-6 animate-float-delay">
+            <div class="text-green-400 font-black text-xl">A+</div>
+            <div class="text-xs font-semibold tracking-wide">Poziom<br />Premium</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="o-mnie" class="py-16 bg-gray-50 overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl lg:text-4xl font-extrabold text-center mb-10" data-aos="fade-up">O mnie</h2>
+      <div class="mt-8 grid sm:grid-cols-1 lg:grid-cols-1 gap-10 items-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="space-y-6 text-lg text-gray-700 leading-relaxed font-light">
+          <p>
+            <strong class="font-semibold text-gray-900">Witaj na stronie Homely English School</strong>, kameralnej,
+            pełnej pasji i zaangażowania szkoły języka angielskiego, którą prowadzę od ponad 25 lat. Nazywam się Monika
+            Rozmarynowska-Komar i jestem magistrem filologii angielskiej. Język angielski oraz nauczanie to moja
+            prawdziwa pasja, którą każdego dnia staram się przekazywać moim uczniom.
+          </p>
+          <p>
+            W Homely English School <strong class="font-semibold text-gray-900">stawiam na jakość, a nie na
+              ilość</strong>, dlatego uczę w niewielkich grupach, co pozwala na indywidualne podejście do każdego
+            ucznia. Cenię tradycyjne metody nauczania — każdy uczeń ma obowiązek starannego prowadzenia zeszytu,
+            robienia notatek, wklejania otrzymanych materiałów oraz odrabiania prac domowych. Systematyczne utrwalanie
+            oraz sprawdzanie wiedzy to klucz do sukcesu!
+          </p>
+          <p>
+            Nauka w mojej szkole nie polega na <span class="italic">mechanicznym przerobieniu</span> podręcznika.
+            Wykorzystuję różnorodne materiały autorskie i te stworzone przez innych anglistów, które starannie dobieram
+            do potrzeb każdego ucznia czy grupy. Na moich zajęciach nie brakuje również gier planszowych i zabaw
+            kreatywnych utrwalających struktury gramatyczne w sposób naturalny i angażujący.
+          </p>
+          <p class="text-xl font-medium text-blue-600 mt-4">
+            Zapraszam do odkrywania tajników języka angielskiego, gdzie każde zajęcia są wyjątkową przygodą!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cennik -->
+  <section id="cennik" class="py-16 bg-white overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl lg:text-4xl font-extrabold text-center mb-12" data-aos="fade-up">Cennik</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-8">
+        <div
+          class="group relative rounded-3xl border border-gray-100 bg-white p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+          data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="absolute -top-3 right-6 bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+            Małe</div>
+          <div class="text-xl font-semibold text-gray-800">Grupy 2-osobowe</div>
+          <div class="mt-3 text-4xl font-extrabold text-black">550 zł <span class="text-lg text-gray-500 font-medium">/
+              mc</span></div>
+          <div class="mt-6 border-t border-gray-100 pt-6">
+            <div class="font-semibold text-blue-600 mb-3">70 zajęć w ciągu roku</div>
+            <ul class="text-sm text-gray-600 space-y-3">
+              <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg> 2×45 min tygodniowo</li>
+              <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg> Materiały w cenie</li>
+            </ul>
+          </div>
+          <a href="#kontakt"
+            class="mt-8 block w-full py-3 px-4 rounded-xl font-semibold text-center border-2 border-black hover:bg-black hover:text-white transition-colors duration-300">Zapisz
+            się</a>
+        </div>
+
+        <div
+          class="group relative rounded-3xl border-2 border-black bg-white p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 transform md:scale-105 z-10"
+          data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-black text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider whitespace-nowrap">
+            Najczęściej wybierane</div>
+          <div class="text-xl font-semibold text-gray-800">Grupy 3-osobowe</div>
+          <div class="mt-3 text-4xl font-extrabold text-black">450 zł <span class="text-lg text-gray-500 font-medium">/
+              mc</span></div>
+          <div class="mt-6 border-t border-gray-100 pt-6">
+            <div class="font-semibold text-blue-600 mb-3">70 zajęć w ciągu roku</div>
+            <ul class="text-sm text-gray-600 space-y-3">
+              <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg> 2×45 min tygodniowo</li>
+              <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg> Materiały w cenie</li>
+            </ul>
+          </div>
+          <a href="#kontakt"
+            class="mt-8 block w-full py-3 px-4 rounded-xl font-semibold text-center bg-black text-white hover:bg-gray-800 transition-colors duration-300 shadow-md hover:shadow-lg">Zapisz
+            się</a>
+        </div>
+
+        <div
+          class="group relative rounded-3xl border border-gray-100 bg-white p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+          data-aos="fade-up" data-aos-delay="300">
+          <div class="text-xl font-semibold text-gray-800">Grupy 4-osobowe</div>
+          <div class="mt-3 text-4xl font-extrabold text-black">380 zł <span class="text-lg text-gray-500 font-medium">/
+              mc</span></div>
+          <div class="mt-6 border-t border-gray-100 pt-6">
+            <div class="font-semibold text-blue-600 mb-3">70 zajęć w ciągu roku</div>
+            <ul class="text-sm text-gray-600 space-y-3">
+              <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg> 2×45 min tygodniowo</li>
+              <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg> Materiały w cenie</li>
+            </ul>
+          </div>
+          <a href="#kontakt"
+            class="mt-8 block w-full py-3 px-4 rounded-xl font-semibold text-center border-2 border-black hover:bg-black hover:text-white transition-colors duration-300">Zapisz
+            się</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jak zacząć (Timeline) -->
+  <section id="jak-zaczac" class="py-20 bg-gray-50/50 overflow-hidden border-t border-gray-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <h2 class="text-3xl lg:text-4xl font-extrabold mb-4">Jak wygląda start?</h2>
+        <p class="text-lg text-gray-600">Rozpoczęcie nauki to zaledwie kilka prostych kroków. Zero formalności na start,
+          czysta przyjemność i pierwsze efekty.</p>
+      </div>
+
+      <div class="relative max-w-4xl mx-auto">
+        <!-- Linia w tle -->
+        <div class="absolute left-8 md:left-1/2 top-4 bottom-4 w-0.5 bg-gray-200 transform md:-translate-x-1/2"></div>
+
+        <div class="space-y-12">
+          <!-- Krok 1 -->
+          <div class="relative flex flex-col md:flex-row items-center md:justify-between group" data-aos="fade-up"
+            data-aos-delay="100">
+            <div
+              class="md:w-[45%] flex pt-5 md:pt-0 justify-start pl-20 md:pl-0 md:justify-end text-left md:text-right w-full">
+              <div>
+                <h3 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400">
+                  1. Pierwszy kontakt</h3>
+                <p class="mt-2 text-gray-600">Napisz do nas formularzem, zadzwoń, albo wyślij wiadomość bezpośrednio z
+                  zapytaniem o dostępne miejsca.</p>
+              </div>
+            </div>
+            <div
+              class="absolute left-8 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full bg-white border-4 border-blue-500 shadow-xl group-hover:scale-110 transition-transform duration-300 z-10">
+              <span class="text-blue-500 font-bold text-lg">1</span>
+            </div>
+            <div class="md:w-[45%] hidden md:block"></div>
+          </div>
+
+          <!-- Krok 2 -->
+          <div class="relative flex flex-col md:flex-row items-center md:justify-between group" data-aos="fade-up"
+            data-aos-delay="200">
+            <div class="md:w-[45%] hidden md:block"></div>
+            <div
+              class="absolute left-8 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full bg-white border-4 border-black shadow-xl group-hover:scale-110 transition-transform duration-300 z-10">
+              <span class="font-bold text-lg">2</span>
+            </div>
+            <div class="md:w-[45%] flex pt-5 md:pt-0 justify-start pl-20 md:pl-0 md:justify-start text-left w-full">
+              <div>
+                <h3 class="text-xl font-bold">Weryfikacja poziomu</h3>
+                <p class="mt-2 text-gray-600">Dobieramy dla ucznia kameralną grupę, w której zespół będzie rozwijał się
+                  w najbardziej optymalnym tempie.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Krok 3 -->
+          <div class="relative flex flex-col md:flex-row items-center md:justify-between group" data-aos="fade-up"
+            data-aos-delay="300">
+            <div
+              class="md:w-[45%] flex pt-5 md:pt-0 justify-start pl-20 md:pl-0 md:justify-end text-left md:text-right w-full">
+              <div>
+                <h3 class="text-xl font-bold text-green-500">3. Zaczynamy zajęcia!</h3>
+                <p class="mt-2 text-gray-600">Spotykamy się na żywo! Błyskawicznie wchodzimy w tryb skutecznego, lecz
+                  bezstresowego przyswajania wiedzy.</p>
+              </div>
+            </div>
+            <div
+              class="absolute left-8 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full bg-white border-4 border-green-500 shadow-xl group-hover:scale-110 transition-transform duration-300 z-10">
+              <span class="font-bold text-green-500 text-lg">3</span>
+            </div>
+            <div class="md:w-[45%] hidden md:block"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt" class="py-16 bg-gray-50 overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl lg:text-4xl font-extrabold text-center mb-12" data-aos="fade-up">Kontakt</h2>
+      <div class="mt-8 grid lg:grid-cols-3 gap-8">
+
+        <div class="lg:col-span-2 rounded-3xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm" data-aos="fade-up"
+          data-aos-delay="100">
+          <h3 class="text-xl font-semibold mb-6">Napisz do mnie</h3>
+          <form id="contact-form" action="https://formsubmit.co/angielski.marki@gmail.com" method="POST"
+            class="space-y-5">
+            <input type="hidden" name="_subject" value="Nowa wiadomość ze strony Homely English!">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1.5">Imię i nazwisko</label>
+                <input type="text" id="name" name="name"
+                  class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 focus:bg-white focus:border-black focus:ring-1 focus:ring-black outline-none transition-all"
+                  placeholder="Jan Kowalski" required>
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Adres e-mail</label>
+                <input type="email" id="email" name="email"
+                  class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 focus:bg-white focus:border-black focus:ring-1 focus:ring-black outline-none transition-all"
+                  placeholder="jan@example.com" required>
+              </div>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1.5">Wiadomość</label>
+              <textarea id="message" name="message" rows="4"
+                class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 focus:bg-white focus:border-black focus:ring-1 focus:ring-black outline-none transition-all resize-none"
+                placeholder="Dzień dobry, chciałbym zapytać o..." required></textarea>
+            </div>
+
+            <div id="form-success"
+              class="hidden rounded-xl bg-green-50 p-4 border border-green-200 text-sm text-green-700 font-medium">
+              Dziękujemy! Wiadomość została wysłana pomyślnie.
+            </div>
+            <div id="form-error"
+              class="hidden rounded-xl bg-red-50 p-4 border border-red-200 text-sm text-red-700 font-medium">
+              Wystąpił błąd podczas wysyłania. Spróbuj powtórzyć lub skontaktuj się z nami mailowo.
+            </div>
+
+            <button type="submit" id="submit-btn"
+              class="w-full sm:w-auto inline-flex justify-center items-center gap-2 rounded-xl bg-black px-8 py-3.5 text-[15px] font-semibold text-white shadow-md hover:bg-gray-800 hover:-translate-y-0.5 transition-all">
+              <span>Wyślij wiadomość</span>
+              <svg id="submit-spinner" class="animate-spin -mr-1 ml-2 h-4 w-4 text-white hidden"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                </path>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="space-y-8" data-aos="fade-left" data-aos-delay="200">
+          <div class="rounded-3xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm">
+            <div class="text-lg font-semibold mb-5">Dane kontaktowe</div>
+            <div class="space-y-4 text-[15px]">
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-blue-50 text-blue-600">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                    </path>
+                  </svg>
+                </div>
+                <a class="hover:text-blue-600 transition-colors font-medium text-gray-800" href="tel:+48502050142">+48
+                  502 050 142</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-blue-50 text-blue-600">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                    </path>
+                  </svg>
+                </div>
+                <a class="hover:text-blue-600 transition-colors font-medium text-gray-800 break-all"
+                  href="mailto:angielski.marki@gmail.com">angielski.marki@gmail.com</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-blue-50 text-blue-600">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-600">ul. Żeromskiego 6, Marki</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-gray-100 overflow-hidden shadow-sm h-[200px] sm:h-[250px]">
+            <iframe title="Mapa Marki" class="w-full h-full" loading="lazy"
+              src="https://www.google.com/maps?q=Żeromskiego+6,+05-270+Marki&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t bg-white">
+    <div
+      class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <div class="font-semibold text-gray-800">Homely English</div>
+        <div>© 2025 Wszystkie prawa zastrzeżone.</div>
+      </div>
+      <div class="flex gap-6">
+        <a href="#top" class="hover:text-black">Polityka prywatności</a>
+        <a href="#top" class="hover:text-black">Regulamin</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Phone Button (Visible on mobile screens) -->
+  <a href="tel:+48502050142"
+    class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-green-500 text-white rounded-full shadow-lg hover:shadow-2xl hover:scale-110 hover:bg-green-600 transition-all duration-300 md:hidden group"
+    aria-label="Zadzwoń teraz">
+    <svg class="w-6 h-6 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+      </path>
+    </svg>
+    <span
+      class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-50 duration-700"></span>
+  </a>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner"
+    class="fixed bottom-0 left-0 right-0 md:bottom-6 md:left-6 md:right-auto md:max-w-sm z-[100] bg-white border border-gray-100 shadow-2xl rounded-t-2xl md:rounded-2xl p-5 transform translate-y-full transition-transform duration-500 ease-in-out">
+    <div class="flex items-start gap-4">
+      <div class="text-3xl">🍪</div>
+      <div>
+        <h4 class="text-sm font-bold text-gray-900 mb-1">Cenimy Twoją prywatność</h4>
+        <p class="text-xs text-gray-600 mb-3">
+          Ta strona korzysta z ciasteczek (cookies), w tym od podmiotów trzecich (np. Mapa Google), do poprawnego
+          działania. Pozostając na stronie zgadzasz się na ich użycie.
+        </p>
+        <div class="flex gap-2">
+          <button id="accept-cookies"
+            class="px-4 py-2 bg-black text-white text-xs font-semibold rounded-lg hover:bg-gray-800 transition-colors">
+            Zgadzam się
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS Animations
+    AOS.init({
+      once: true,
+      offset: 50,
+      duration: 800,
+      easing: 'ease-out-cubic',
+    });
+
+    const header = document.querySelector("header");
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const closeMenuBtn = document.getElementById("close-menu-btn");
+    const mobileSidebar = document.getElementById("mobile-sidebar");
+    const mobileOverlay = document.getElementById("mobile-overlay");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+
+    // Scroll effect for header
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        header.classList.remove("bg-white/90", "border-transparent");
+        header.classList.add("bg-white", "shadow-md", "border-gray-100");
+      } else {
+        header.classList.add("bg-white/90", "border-transparent");
+        header.classList.remove("bg-white", "shadow-md", "border-gray-100");
+      }
+    });
+
+    // Mobile Menu Logic
+    function openMobileMenu() {
+      mobileSidebar.classList.remove("translate-x-full");
+      mobileOverlay.classList.remove("opacity-0", "pointer-events-none");
+      document.body.style.overflow = "hidden"; // Prevent scrolling
+    }
+
+    function closeMobileMenu() {
+      mobileSidebar.classList.add("translate-x-full");
+      mobileOverlay.classList.add("opacity-0", "pointer-events-none");
+      document.body.style.overflow = ""; // Restore scrolling
+    }
+
+    mobileMenuBtn.addEventListener("click", openMobileMenu);
+    closeMenuBtn.addEventListener("click", closeMobileMenu);
+    mobileOverlay.addEventListener("click", closeMobileMenu);
+
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", closeMobileMenu);
+    });
+
+    // AJAX Form Submit Handle
+    const contactForm = document.getElementById("contact-form");
+    const submitBtn = document.getElementById("submit-btn");
+    const submitSpinner = document.getElementById("submit-spinner");
+    const formSuccess = document.getElementById("form-success");
+    const formError = document.getElementById("form-error");
+
+    if (contactForm) {
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const btnText = submitBtn.querySelector("span");
+        submitBtn.disabled = true;
+        submitBtn.classList.add("opacity-70", "cursor-not-allowed");
+        submitSpinner.classList.remove("hidden");
+        btnText.textContent = "Wysyłanie...";
+        formSuccess.classList.add("hidden");
+        formError.classList.add("hidden");
+
+        fetch(contactForm.action, {
+          method: "POST",
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        })
+          .then(response => {
+            if (response.ok) {
+              contactForm.reset();
+              formSuccess.classList.remove("hidden");
+            } else {
+              throw new Error("Wystąpił błąd");
+            }
+          })
+          .catch(error => {
+            formError.classList.remove("hidden");
+          })
+          .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.classList.remove("opacity-70", "cursor-not-allowed");
+            submitSpinner.classList.add("hidden");
+            btnText.textContent = "Wyślij wiadomość";
+          });
+      });
+    }
+
+    // Cookie Banner Logic
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptCookiesBtn = document.getElementById('accept-cookies');
+
+    if (!localStorage.getItem('cookiesAccepted')) {
+      setTimeout(() => {
+        cookieBanner.classList.remove('translate-y-full');
+      }, 1500); // Pokazuje się nagle po 1.5 sekundy od wejścia na stronę
+    }
+
+    if (acceptCookiesBtn) {
+      acceptCookiesBtn.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieBanner.classList.add('translate-y-full');
+      });
+    }
+
+    // Typewriter effect Script (Prostsza i niezawodna wersja)
+    const typeWriterElement = document.querySelector('.typewrite');
+    const words = ["kameralnie...", "z pasją do nauki.", "bez stresu.", "prosto do matury!"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      if (!typeWriterElement) return;
+      const currentWord = words[wordIndex];
+
+      if (isDeleting) {
+        charIndex--;
+      } else {
+        charIndex++;
+      }
+
+      typeWriterElement.innerHTML = '<span class="wrap">' + currentWord.substring(0, charIndex) + '</span>';
+
+      let typeSpeed = 100 - Math.random() * 50; // Lekka losowość uderzeń w klawisze
+
+      if (isDeleting) {
+        typeSpeed /= 2; // Szybciej usuwa
+      }
+
+      if (!isDeleting && charIndex === currentWord.length) {
+        typeSpeed = 2000; // Czeka 2 sekundy po napisaniu
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        typeSpeed = 500; // Pauza zanim zacznie nowe słowo
+      }
+
+      setTimeout(typeEffect, typeSpeed);
+    }
+
+    // Odpal typowanie chwilę po załadowaniu (aby zgrało się z animacją wjazdu AOS)
+    setTimeout(typeEffect, 1000);
+  </script>
+</body>
+
+</html>
