@@ -479,6 +479,58 @@
     </div>
   </section>
 
+  <!-- Mini Quiz -->
+  <section id="quiz" class="py-20 bg-white overflow-hidden">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-semibold text-sm mb-4">
+          ✨ Interaktywny test
+        </div>
+        <h2 class="text-3xl lg:text-4xl font-extrabold mb-4">Sprawdź swój poziom!</h2>
+        <p class="text-lg text-gray-600">Rozwiąż błyskawiczny quiz (15 pytań) i zobacz, w której grupie poczujesz się najlepiej.</p>
+      </div>
+
+      <div class="bg-white rounded-3xl border border-gray-100 shadow-xl p-6 sm:p-10 relative overflow-hidden" data-aos="zoom-in" data-aos-delay="100">
+        <!-- Tło dekoracyjne -->
+        <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-blue-50 rounded-full blur-3xl opacity-50 z-0"></div>
+        
+        <div id="quiz-container" class="relative z-10 transition-all duration-500 min-h-[300px]">
+          
+          <div id="quiz-start-view" class="text-center py-8 block">
+            <h3 class="text-2xl font-bold mb-4">Gotowy na wyzwanie?</h3>
+            <p class="text-gray-600 mb-8 max-w-md mx-auto">Rozwiąż krótki test (15 pytań), aby poznać swój szacowany poziom zaawansowania. Odpowiadaj intuicyjnie.</p>
+            <button id="quiz-start-btn" class="inline-flex items-center justify-center rounded-full px-8 py-3.5 text-[15px] font-semibold bg-blue-600 text-white shadow-lg shadow-blue-500/30 hover:shadow-xl hover:-translate-y-1 transition-all">
+              Rozpocznij Test Poziomujący
+            </button>
+            <div id="quiz-loading" class="hidden mt-4 text-sm text-gray-500 animate-pulse">Ładowanie bazy pytań...</div>
+          </div>
+
+          <div id="quiz-dynamic-questions" class="w-full hidden">
+            <!-- Pytania będą generowane tutaj przez JS -->
+          </div>
+
+          <!-- Wynik -->
+          <div class="quiz-step hidden text-center" id="quiz-result-view" data-step="result">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100 text-green-500 mb-6 font-bold text-4xl">
+              ✓
+            </div>
+            <h3 class="text-3xl font-bold text-gray-900 mb-2">Gotowe!</h3>
+            <p class="text-xl text-gray-600 mb-6">Osiągnięty poziom: <span id="quiz-score" class="font-black text-blue-600"></span></p>
+            
+            <div id="quiz-feedback" class="p-4 bg-gray-50 rounded-xl text-gray-700 italic border border-gray-100 mb-8 max-w-lg mx-auto">
+              <!-- Tu pojawi się werdykt -->
+            </div>
+
+            <a href="#kontakt" class="inline-flex items-center justify-center rounded-full px-8 py-3.5 text-[15px] font-semibold bg-black text-white shadow-lg hover:shadow-xl transition-all">
+              Napisz do mnie i zarezerwuj miejsce
+            </a>
+            <button id="quiz-restart" class="block w-full mt-4 text-sm text-gray-500 hover:text-black underline">Rozwiąż ponownie</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Kontakt -->
   <section id="kontakt" class="py-16 bg-gray-50 overflow-hidden">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -844,6 +896,233 @@
       }
 
       setTimeout(typeEffect, typeSpeed);
+    }
+
+    // -- Mini Quiz Logic (CAT Adaptive) --
+    let quizDatabaseJSON = null;
+    let usedQuestions = new Set();
+    const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
+    let currentLevelIndex = 0; // Starts at A1
+    
+    let currentStep = 1; // 1 to 15
+    const MAX_STEPS = 15;
+    let quizScoresHistory = []; // Track correct/incorrect
+
+    const quizStartView = document.getElementById('quiz-start-view');
+    const quizStartBtn = document.getElementById('quiz-start-btn');
+    const quizLoading = document.getElementById('quiz-loading');
+    const quizDynamicArea = document.getElementById('quiz-dynamic-questions');
+    const resultView = document.getElementById('quiz-result-view');
+    const quizScoreDisplay = document.getElementById('quiz-score');
+    const quizFeedback = document.getElementById('quiz-feedback');
+    const quizRestartBtn = document.getElementById('quiz-restart');
+    
+    quizStartBtn.addEventListener('click', async () => {
+      quizStartBtn.classList.add('hidden');
+      quizLoading.classList.remove('hidden');
+      
+      try {
+        if(!quizDatabaseJSON) {
+          const res = await fetch('quiz-data.json');
+          if(!res.ok) throw new Error("Network response was not ok");
+          quizDatabaseJSON = await res.json();
+        }
+        setTimeout(startQuiz, 300); // Małe opóźnienie dla estetyki wejścia
+      } catch (err) {
+        quizLoading.textContent = "Błąd połączenia. Upewnij się, że serwer działa prawidłowo i odśwież stronę.";
+        console.error(err);
+      }
+    });
+
+    function startQuiz() {
+      usedQuestions.clear();
+      currentLevelIndex = 0; // Start at A1
+      currentStep = 1;
+      quizScoresHistory = [];
+      
+      quizStartView.classList.replace('block', 'hidden');
+      quizDynamicArea.classList.replace('hidden', 'block');
+      quizDynamicArea.innerHTML = '';
+      resultView.classList.replace('block', 'hidden');
+      resultView.classList.add('hidden');
+      
+      renderQuestionStep();
+    }
+
+    function getRandomQuestionForLevel(levelName) {
+      const qArray = quizDatabaseJSON[levelName];
+      let unused = qArray.filter(q => !usedQuestions.has(q.q)); // unikalne po tekście pytania
+      if (unused.length === 0) unused = qArray; // fallback gdybyśmy wyczerpali bazę
+      const q = unused[Math.floor(Math.random() * unused.length)];
+      usedQuestions.add(q.q);
+      return q;
+    }
+
+    function renderQuestionStep() {
+      quizDynamicArea.innerHTML = '';
+      
+      const levelName = LEVELS[currentLevelIndex];
+      const qData = getRandomQuestionForLevel(levelName);
+      const isMulti = qData.type === 'multi';
+      
+      const div = document.createElement('div');
+      div.className = 'quiz-step block animate-[fade-in-up_0.4s_ease-out] w-full';
+      
+      let optionsHtml = '';
+      const letters = ['a)', 'b)', 'c)', 'd)', 'e)', 'f)'];
+      
+      qData.o.forEach((opt, optIndex) => {
+        let isCorrectAttr = '';
+        if (isMulti) {
+          isCorrectAttr = qData.c.includes(optIndex) ? 'true' : 'false';
+        } else {
+          isCorrectAttr = (optIndex === qData.c).toString();
+        }
+        
+        optionsHtml += `<button class="quiz-option w-full text-left px-6 py-4 rounded-xl border-2 border-gray-100 hover:border-blue-500 hover:bg-blue-50 font-medium text-lg mb-3 transition-all" data-index="${optIndex}" data-correct="${isCorrectAttr}">${letters[optIndex]} ${opt}</button>`;
+      });
+
+      let confirmBtnHtml = '';
+      if (isMulti) {
+        confirmBtnHtml = `<button id="quiz-confirm-btn" class="mt-4 w-full py-4 bg-black text-white rounded-xl font-bold text-lg hover:bg-gray-800 transition-all shadow-lg hover:-translate-y-1">Zatwierdź odpowiedź</button>`;
+      }
+
+      div.innerHTML = `
+        <h3 class="text-sm font-bold text-gray-400 mb-2 uppercase tracking-wide">
+          <span>Pytanie ${currentStep} z ${MAX_STEPS}</span>
+          ${isMulti ? '<span class="ml-2 bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-xs float-right">Wielokrotny wybór</span>' : ''}
+        </h3>
+        <p class="text-2xl font-bold text-gray-900 mb-8">${currentStep}. ${qData.q}</p>
+        <div class="space-y-3 relative">
+          ${optionsHtml}
+          ${confirmBtnHtml}
+        </div>
+      `;
+      quizDynamicArea.appendChild(div);
+      
+      const allOptions = div.querySelectorAll('.quiz-option');
+      const confirmBtn = div.querySelector('#quiz-confirm-btn');
+      
+      let selectedIndices = new Set();
+
+      if (isMulti) {
+        allOptions.forEach((btn, idx) => {
+          btn.addEventListener('click', function() {
+            if (this.disabled) return;
+            if (selectedIndices.has(idx)) {
+              selectedIndices.delete(idx);
+              this.classList.remove('border-blue-500', 'bg-blue-50');
+              this.classList.add('border-gray-100');
+            } else {
+              selectedIndices.add(idx);
+              this.classList.add('border-blue-500', 'bg-blue-50');
+              this.classList.remove('border-gray-100');
+            }
+          });
+        });
+
+        confirmBtn.addEventListener('click', function() {
+          if(selectedIndices.size === 0) return; // Zabezpieczenie przed kliknięciem w pustkę
+          
+          this.disabled = true;
+          allOptions.forEach(s => s.disabled = true);
+          
+          let isCorrect = true;
+          qData.c.forEach(correctIdx => {
+            if (!selectedIndices.has(correctIdx)) isCorrect = false;
+          });
+          if (selectedIndices.size !== qData.c.length) isCorrect = false;
+
+          quizScoresHistory.push(isCorrect);
+          
+          allOptions.forEach((btn, idx) => {
+            const isActuallyCorrect = qData.c.includes(idx);
+            btn.classList.remove('border-gray-100', 'border-blue-500', 'bg-blue-50');
+            
+            if(isActuallyCorrect) {
+              btn.classList.add('border-green-500', 'bg-green-50', 'text-green-800');
+            } else if (selectedIndices.has(idx) && !isActuallyCorrect) {
+              btn.classList.add('border-red-500', 'bg-red-50', 'text-red-800');
+            } else {
+              btn.classList.add('border-gray-100', 'opacity-40');
+            }
+          });
+
+          handleLevelChangeAndProceed(isCorrect);
+        });
+
+      } else {
+        allOptions.forEach((btn, idx) => {
+          btn.addEventListener('click', function() {
+            if (this.disabled) return;
+            const isCorrect = this.dataset.correct === 'true';
+            
+            quizScoresHistory.push(isCorrect);
+            
+            this.classList.remove('border-gray-100');
+            if(isCorrect) {
+              this.classList.add('border-green-500', 'bg-green-50', 'text-green-800');
+            } else {
+              this.classList.add('border-red-500', 'bg-red-50', 'text-red-800');
+              const correctBtn = this.parentElement.querySelector('[data-correct="true"]');
+              if(correctBtn) correctBtn.classList.add('border-green-500', 'bg-green-50');
+            }
+
+            allOptions.forEach(s => s.disabled = true);
+            handleLevelChangeAndProceed(isCorrect);
+          });
+        });
+      }
+
+      function handleLevelChangeAndProceed(isCorrect) {
+        if(isCorrect) {
+          currentLevelIndex = Math.min(LEVELS.length - 1, currentLevelIndex + 1);
+        } else {
+          currentLevelIndex = Math.max(0, currentLevelIndex - 1);
+        }
+
+        setTimeout(() => {
+          currentStep++;
+          if (currentStep <= MAX_STEPS) {
+            renderQuestionStep();
+          } else {
+            quizDynamicArea.classList.replace('block', 'hidden');
+            showQuizResult();
+          }
+        }, 1400);
+      }
+    }
+
+    function showQuizResult() {
+      // Ostateczny poziom to ten "wywalczony" pod koniec 15 pytań
+      const finalLevel = LEVELS[currentLevelIndex];
+      const correctAnswers = quizScoresHistory.filter(x => x).length;
+      
+      quizScoreDisplay.textContent = finalLevel;
+      
+      let feedback = "";
+      if (finalLevel === "C2" || finalLevel === "C1") {
+        feedback = `Twój wynik wskazuje na poziom zaawansowany (${finalLevel}). Zapraszam na konwersacje i przygotowanie na wysokie wyniki matury rozszerzonej.`;
+      } else if (finalLevel === "B2" || finalLevel === "B1") {
+        feedback = `Twój wynik to prawdopodobnie poziom średniozaawansowany (${finalLevel}). Chętnie pomogę Ci w usystematyzowaniu wiedzy z gramatyki na konwersacjach.`;
+      } else {
+        feedback = `Z testu wskazuje, że operujesz na poziomie podstawowym (${finalLevel}). W moich grupach początkujących pomału i bez stresu zbudujemy solidne fundamenty języka.`;
+      }
+      
+      quizFeedback.textContent = feedback;
+      resultView.classList.remove('hidden');
+      resultView.classList.add('block', 'animate-[fade-in-up_0.4s_ease-out]');
+    }
+
+    if(quizRestartBtn) {
+      quizRestartBtn.addEventListener('click', () => {
+        resultView.classList.add('hidden');
+        resultView.classList.remove('block');
+        quizStartBtn.classList.remove('hidden');
+        quizStartBtn.textContent = "Spróbuj ponownie z nowym setem";
+        quizLoading.classList.add('hidden');
+        quizStartView.classList.replace('hidden', 'block');
+      });
     }
 
     // Odpal typowanie chwilę po załadowaniu (aby zgrało się z animacją wjazdu AOS)
